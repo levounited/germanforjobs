@@ -1,497 +1,1206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GermanForJobs - Master Business German. Land Your Dream Job.</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Expert German language training for international professionals. Business German courses for job seekers, nurses, engineers, and expats targeting the German job market.">
+  <meta name="keywords" content="business German courses, learn German for work, German job interview preparation, German for nurses, German for engineers, expat German lessons, DACH region jobs, professional German online">
+  <meta name="author" content="Levent Bekan – GermanForJobs">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://germanforjobs.com/">
 
-        :root {
-            --primary: #f59e0b;
-            --dark: #0f172a;
-            --light: #f8fafc;
-            --accent: #3b82f6;
-        }
+  <!-- Open Graph -->
+  <meta property="og:title" content="GermanForJobs – Master Business German. Land Your Dream Job in Germany.">
+  <meta property="og:description" content="Expert German language training for job seekers, healthcare workers, engineers, and expats. Practical, career-focused courses from a native-level German tutor.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://germanforjobs.com/">
+  <meta property="og:image" content="https://germanforjobs.com/og-image.jpg">
 
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.6;
-            color: var(--dark);
-            overflow-x: hidden;
-        }
+  <title>GermanForJobs – Master Business German. Land Your Dream Job in Germany.</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            padding: 1.5rem 3rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-        }
+  <style>
+    /* ===== CSS VARIABLES ===== */
+    :root {
+      --navy: #0f172a;
+      --navy-light: #1e293b;
+      --gold: #f59e0b;
+      --gold-dark: #d97706;
+      --white: #ffffff;
+      --gray-50: #f8fafc;
+      --gray-100: #f3f4f6;
+      --gray-200: #e5e7eb;
+      --gray-400: #9ca3af;
+      --gray-600: #4b5563;
+      --gray-700: #374151;
+      --text: #1a2332;
+      --radius: 12px;
+      --radius-lg: 20px;
+      --shadow: 0 4px 20px rgba(26,35,50,0.08);
+      --shadow-md: 0 8px 32px rgba(26,35,50,0.12);
+      --transition: 0.25s ease;
+    }
 
-        .logo {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--dark);
-        }
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    button { cursor: pointer; font-family: inherit; border: none; background: none; }
 
-        .logo span {
-            color: var(--primary);
-        }
+    /* ===== LAYOUT ===== */
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: 96px 0; }
+    .section--alt { background: var(--gray-50); }
 
-        .nav-links {
-            display: flex;
-            gap: 2.5rem;
-            list-style: none;
-            align-items: center;
-        }
+    /* ===== TYPOGRAPHY ===== */
+    h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; color: var(--navy); }
+    h1 { font-size: clamp(2rem, 5vw, 3.25rem); }
+    h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); }
+    h3 { font-size: 1.25rem; }
+    
+    .section-label {
+      display: inline-block;
+      background: rgba(245,166,35,0.12);
+      color: var(--gold-dark);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 16px;
+    }
+    .section-header { text-align: center; max-width: 640px; margin: 0 auto 56px; }
+    .section-header p { color: var(--gray-600); margin-top: 12px; font-size: 1.05rem; }
+    .highlight { color: var(--gold); }
 
-        .nav-links a {
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: color 0.3s ease;
-        }
+    /* ===== BUTTONS ===== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 12px 24px;
+      border-radius: 100px;
+      transition: all var(--transition);
+      white-space: nowrap;
+    }
+    .btn--primary { background: var(--gold); color: var(--navy); }
+    .btn--primary:hover { background: var(--gold-dark); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(245,166,35,0.35); }
+    .btn--outline { border: 2px solid var(--navy); color: var(--navy); }
+    .btn--outline:hover { background: var(--navy); color: var(--white); transform: translateY(-1px); }
+    .btn--lg { padding: 15px 32px; font-size: 1rem; }
+    .btn--sm { padding: 9px 20px; font-size: 0.875rem; }
 
-        .nav-links a:hover {
-            color: var(--primary);
-        }
+    /* ===== NAV ===== */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-200);
+      box-shadow: 0 2px 12px rgba(26,35,50,0.06);
+    }
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .nav__logo {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--navy);
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    .nav__logo span { color: var(--gold); }
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .nav__link {
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--gray-700);
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: color var(--transition), background var(--transition);
+    }
+    .nav__link:hover { color: var(--navy); background: var(--gray-100); }
+    .nav__toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      padding: 8px;
+    }
+    .nav__toggle span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--navy);
+      border-radius: 2px;
+      transition: all var(--transition);
+    }
 
-        .nav-cta {
-            background: var(--primary);
-            color: white;
-            padding: 0.75rem 1.75rem;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
+    /* ===== MODERN HERO ===== */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 0;
+    }
+    .hero-content {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: white;
+      padding: 8rem 4rem 4rem 5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-content::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -30%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: float 8s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(-30px, 30px) scale(1.1); }
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      color: var(--gold);
+      padding: 0.6rem 1.2rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 2rem;
+      width: fit-content;
+    }
+    h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 4rem;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, var(--gold) 0%, #fbbf24 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-description {
+      font-size: 1.25rem;
+      line-height: 1.8;
+      color: #cbd5e1;
+      margin-bottom: 3rem;
+      max-width: 90%;
+    }
+    .hero-buttons { display: flex; gap: 1rem; margin-bottom: 4rem; }
+    .secondary-btn {
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      padding: 1.2rem 2.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.05rem;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+    .secondary-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: rgba(255, 255, 255, 0.4);
+      transform: translateY(-3px);
+    }
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      padding-top: 3rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .stat-number {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+    .stat-label {
+      font-size: 0.95rem;
+      color: #94a3b8;
+    }
+    .hero-image {
+      position: relative;
+      overflow: hidden;
+      background: #e2e8f0;
+    }
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    .hero-image::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.3) 0%, transparent 50%);
+      z-index: 1;
+    }
+    .floating-badge {
+      position: absolute;
+      bottom: 3rem;
+      right: 3rem;
+      background: white;
+      padding: 1.5rem 2rem;
+      border-radius: 16px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+      z-index: 2;
+    }
+    .rating {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .stars {
+      color: var(--gold);
+      font-size: 1.2rem;
+    }
+    .rating-text {
+      font-weight: 600;
+      color: var(--navy);
+    }
+    .reviews-text {
+      font-size: 0.85rem;
+      color: #64748b;
+    }
 
-        .nav-cta:hover {
-            background: #d97706;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
-        }
+    /* ===== WHO IT'S FOR ===== */
+    .who-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .who-card {
+      background: var(--white);
+      border: 1.5px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 32px 24px;
+      text-align: center;
+      transition: all var(--transition);
+    }
+    .who-card:hover { border-color: var(--gold); box-shadow: var(--shadow-md); transform: translateY(-4px); }
+    .who-card__icon {
+      width: 64px;
+      height: 64px;
+      background: rgba(245,166,35,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 1.75rem;
+    }
+    .who-card h3 { font-size: 1.05rem; margin-bottom: 10px; }
+    .who-card p { font-size: 0.88rem; color: var(--gray-600); line-height: 1.55; }
 
-        /* Hero Section - Full Height Split Screen */
-        .hero {
-            min-height: 100vh;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            margin-top: 0;
-        }
+    /* ===== WHY IT WORKS ===== */
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .why-bullets { display: flex; flex-direction: column; gap: 24px; }
+    .why-bullet {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .why-bullet__num {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      background: var(--gold);
+      color: var(--navy);
+      font-weight: 800;
+      font-size: 1rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .why-bullet h3 { font-size: 1rem; margin-bottom: 4px; }
+    .why-bullet p { font-size: 0.9rem; color: var(--gray-600); }
+    .proof-card {
+      background: var(--navy);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      color: var(--white);
+    }
+    .proof-card__quote { font-size: 2.5rem; color: var(--gold); line-height: 1; margin-bottom: 12px; }
+    .proof-card p { font-size: 1rem; line-height: 1.65; margin-bottom: 24px; opacity: 0.9; }
+    .proof-card__author { display: flex; align-items: center; gap: 14px; }
+    .proof-card__avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--navy);
+      flex-shrink: 0;
+    }
+    .proof-card__name { font-weight: 700; font-size: 0.95rem; }
+    .proof-card__role { font-size: 0.8rem; opacity: 0.65; margin-top: 2px; }
 
-        /* Left Side - Content */
-        .hero-content {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            color: white;
-            padding: 8rem 4rem 4rem 5rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
+    /* ===== COURSES ===== */
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .course-card {
+      border-radius: var(--radius-lg);
+      border: 1.5px solid var(--gray-200);
+      overflow: hidden;
+      transition: all var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+    .course-card:hover { border-color: var(--gold); box-shadow: var(--shadow-md); transform: translateY(-4px); }
+    .course-card__top {
+      background: var(--navy);
+      padding: 32px 28px 24px;
+      color: var(--white);
+    }
+    .course-card__icon { font-size: 2.5rem; margin-bottom: 16px; }
+    .course-card__level {
+      display: inline-block;
+      background: rgba(245,166,35,0.2);
+      color: var(--gold);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 100px;
+      margin-bottom: 12px;
+    }
+    .course-card__top h3 { font-size: 1.2rem; color: var(--white); }
+    .course-card__body { padding: 24px 28px 28px; flex: 1; display: flex; flex-direction: column; }
+    .course-card__body p { color: var(--gray-600); font-size: 0.9rem; flex: 1; margin-bottom: 20px; line-height: 1.6; }
+    .course-card__features { display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px; }
+    .course-card__feature {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: var(--gray-700);
+    }
+    .course-card__feature::before {
+      content: '';
+      width: 18px;
+      height: 18px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f5a623' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") no-repeat center/contain;
+      flex-shrink: 0;
+    }
+    .form-submit { width: 100%; padding: 15px; }
 
-        .hero-content::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -30%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, transparent 70%);
-            border-radius: 50%;
-            animation: float 8s ease-in-out infinite;
-        }
+    /* ===== TESTIMONIALS ===== */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .t-card {
+      background: var(--white);
+      border: 1.5px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: box-shadow var(--transition);
+    }
+    .t-card:hover { box-shadow: var(--shadow-md); border-color: var(--gold); }
+    .t-card__stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+    .t-card__text { font-size: 0.92rem; color: var(--gray-700); line-height: 1.65; flex: 1; font-style: italic; }
+    .t-card__text::before { content: '\201C'; }
+    .t-card__text::after { content: '\201D'; }
+    .t-card__author { display: flex; align-items: center; gap: 12px; }
+    .t-card__avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .t-card__name { font-weight: 700; font-size: 0.9rem; }
+    .t-card__location { font-size: 0.78rem; color: var(--gray-400); margin-top: 1px; }
 
-        @keyframes float {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            50% { transform: translate(-30px, 30px) scale(1.1); }
-        }
+    /* ===== ABOUT ===== */
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .about-visual {
+      position: relative;
+    }
+    .about-photo {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+      border-radius: var(--radius-lg);
+      aspect-ratio: 4/5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 6rem;
+      color: var(--gold);
+      overflow: hidden;
+    }
+    .about-badge {
+      position: absolute;
+      bottom: -16px;
+      right: -16px;
+      background: var(--gold);
+      color: var(--navy);
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      font-weight: 700;
+      box-shadow: var(--shadow-md);
+      text-align: center;
+    }
+    .about-badge strong { display: block; font-size: 1.5rem; }
+    .about-badge span { font-size: 0.78rem; }
+    .about-content p { color: var(--gray-600); margin-bottom: 16px; font-size: 0.97rem; line-height: 1.7; }
+    .about-stats { display: flex; gap: 32px; margin: 28px 0; }
+    .about-stat strong { display: block; font-size: 1.75rem; font-weight: 800; color: var(--navy); }
+    .about-stat span { font-size: 0.8rem; color: var(--gray-400); }
 
-        .badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: rgba(245, 158, 11, 0.15);
-            border: 1px solid rgba(245, 158, 11, 0.3);
-            color: var(--primary);
-            padding: 0.6rem 1.2rem;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            margin-bottom: 2rem;
-            width: fit-content;
-            animation: slideInLeft 0.8s ease-out;
-        }
+    /* ===== CONTACT ===== */
+    .contact-inner {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .contact-info h2 { margin-bottom: 16px; }
+    .contact-info p { color: var(--gray-600); margin-bottom: 28px; font-size: 0.97rem; line-height: 1.7; }
+    .contact-detail {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      font-size: 0.92rem;
+    }
+    .contact-detail__icon {
+      width: 40px;
+      height: 40px;
+      background: rgba(245,166,35,0.1);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .contact-form {
+      background: var(--white);
+      border: 1.5px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      box-shadow: var(--shadow);
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { margin-bottom: 18px; }
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1.5px solid var(--gray-200);
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 0.92rem;
+      color: var(--navy);
+      background: var(--white);
+      transition: border-color var(--transition);
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(245,166,35,0.12); }
+    .form-group textarea { resize: vertical; min-height: 110px; }
 
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
+    /* ===== FOOTER ===== */
+    .footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.75);
+      padding: 72px 0 0;
+    }
+    .footer__grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 48px;
+      padding-bottom: 56px;
+    }
+    .footer__logo {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 14px;
+      display: block;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    .footer__logo span { color: var(--gold); }
+    .footer__about p { font-size: 0.88rem; line-height: 1.7; }
+    .footer__heading {
+      color: var(--white);
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .footer__links li + li { margin-top: 10px; }
+    .footer__links a { font-size: 0.88rem; transition: color var(--transition); }
+    .footer__links a:hover { color: var(--gold); }
+    .footer__contact-item { display: flex; align-items: center; gap: 10px; font-size: 0.88rem; margin-bottom: 12px; }
+    .footer__bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 20px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.82rem;
+    }
+    .footer__bottom a { color: rgba(255,255,255,0.55); transition: color var(--transition); }
+    .footer__bottom a:hover { color: var(--gold); }
 
-        h1 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 4rem;
-            font-weight: 700;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-            position: relative;
-            animation: slideInUp 0.8s ease-out 0.2s both;
-        }
+    /* ===== WHATSAPP FLOAT ===== */
+    .wa-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 999;
+      width: 58px;
+      height: 58px;
+      background: #25d366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 24px rgba(37,211,102,0.4);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .wa-float:hover { transform: scale(1.1); box-shadow: 0 8px 32px rgba(37,211,102,0.5); }
+    .wa-float svg { width: 30px; height: 30px; fill: white; }
 
-        @keyframes slideInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .gradient-text {
-            background: linear-gradient(135deg, var(--primary) 0%, #fbbf24 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero-description {
-            font-size: 1.25rem;
-            line-height: 1.8;
-            color: #cbd5e1;
-            margin-bottom: 3rem;
-            max-width: 90%;
-            animation: slideInUp 0.8s ease-out 0.4s both;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 1rem;
-            animation: slideInUp 0.8s ease-out 0.6s both;
-        }
-
-        .primary-btn {
-            background: var(--primary);
-            color: white;
-            padding: 1.2rem 2.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.05rem;
-            transition: all 0.3s ease;
-            display: inline-block;
-            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.3);
-        }
-
-        .primary-btn:hover {
-            background: #d97706;
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(245, 158, 11, 0.4);
-        }
-
-        .secondary-btn {
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            padding: 1.2rem 2.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.05rem;
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.3s ease;
-            display: inline-block;
-            backdrop-filter: blur(10px);
-        }
-
-        .secondary-btn:hover {
-            background: rgba(255, 255, 255, 0.2);
-            border-color: rgba(255, 255, 255, 0.4);
-            transform: translateY(-3px);
-        }
-
-        .stats-bar {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-top: 4rem;
-            padding-top: 3rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            animation: slideInUp 0.8s ease-out 0.8s both;
-        }
-
-        .stat {
-            text-align: left;
-        }
-
-        .stat-number {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            font-size: 0.95rem;
-            color: #94a3b8;
-        }
-
-        /* Right Side - Image */
-        .hero-image {
-            position: relative;
-            overflow: hidden;
-            background: #e2e8f0;
-        }
-
-        .hero-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-            animation: zoomIn 1.2s ease-out;
-        }
-
-        @keyframes zoomIn {
-            from {
-                transform: scale(1.1);
-                opacity: 0;
-            }
-            to {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-
-        .hero-image::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(15, 23, 42, 0.3) 0%, transparent 50%);
-            z-index: 1;
-        }
-
-        .floating-badge {
-            position: absolute;
-            bottom: 3rem;
-            right: 3rem;
-            background: white;
-            padding: 1.5rem 2rem;
-            border-radius: 16px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
-            z-index: 2;
-            animation: fadeInUp 1s ease-out 0.8s both;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .rating {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .stars {
-            color: var(--primary);
-            font-size: 1.2rem;
-        }
-
-        .rating-text {
-            font-weight: 600;
-            color: var(--dark);
-        }
-
-        .reviews-text {
-            font-size: 0.85rem;
-            color: #64748b;
-        }
-
-        /* WhatsApp Float */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            background: #25d366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
-            cursor: pointer;
-            z-index: 1000;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
-
-        .whatsapp-float:hover {
-            transform: scale(1.15);
-            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.5);
-        }
-
-        /* Responsive */
-        @media (max-width: 1024px) {
-            .hero {
-                grid-template-columns: 1fr;
-                min-height: auto;
-            }
-
-            .hero-content {
-                padding: 6rem 2rem 3rem;
-            }
-
-            .hero-image {
-                min-height: 60vh;
-            }
-
-            h1 {
-                font-size: 3rem;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .stats-bar {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-        }
-
-        @media (max-width: 640px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero-description {
-                font-size: 1.1rem;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-            }
-
-            nav {
-                padding: 1rem 1.5rem;
-            }
-
-            .floating-badge {
-                bottom: 1.5rem;
-                right: 1.5rem;
-                padding: 1rem 1.5rem;
-            }
-        }
-    </style>
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-content { padding: 6rem 2rem 3rem; }
+      .hero-image { min-height: 60vh; }
+      h1 { font-size: 3rem; }
+      .who-grid { grid-template-columns: repeat(2, 1fr); }
+      .courses-grid { grid-template-columns: 1fr; }
+      .footer__grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .section { padding: 64px 0; }
+      .nav__links { display: none; }
+      .nav__toggle { display: flex; }
+      .why-grid { grid-template-columns: 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .about-inner { grid-template-columns: 1fr; }
+      .about-visual { display: none; }
+      .contact-inner { grid-template-columns: 1fr; }
+      .footer__grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .stats-bar { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="logo">German<span>ForJobs</span></div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo">German<span>ForJobs</span></a>
+      <div class="nav__links" id="nav-links">
+        <a href="/" class="nav__link">Home</a>
+        <a href="courses.html" class="nav__link">Courses</a>
+        <a href="about.html" class="nav__link">About</a>
+        <a href="contact.html" class="nav__link">Contact</a>
+        <a href="contact.html" class="btn btn--primary btn--sm">Book Consultation</a>
+      </div>
+      <button class="nav__toggle" id="nav-toggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== MODERN HERO ========== -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="badge">
+        ✓ Trusted by 500+ professionals worldwide
+      </div>
+      
+      <h1>
+        Master Business German.<br>
+        Land Your <span class="gradient-text">Dream Job</span>
+      </h1>
+      
+      <p class="hero-description">
+        Career-focused German courses for international professionals. Real language for real workplaces — taught by an expert who knows what employers expect.
+      </p>
+      
+      <div class="hero-buttons">
+        <a href="courses.html" class="btn btn--primary btn--lg">View All Courses</a>
+        <a href="contact.html" class="secondary-btn">Book Free Consultation</a>
+      </div>
+
+      <div class="stats-bar">
+        <div>
+          <div class="stat-number">500+</div>
+          <div class="stat-label">Students trained</div>
+        </div>
+        <div>
+          <div class="stat-number">95%</div>
+          <div class="stat-label">Success rate</div>
+        </div>
+        <div>
+          <div class="stat-number">5.0</div>
+          <div class="stat-label">Average rating</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="levo-professional.jpg" alt="Levent Bekan - German Language Expert">
+      <div class="floating-badge">
+        <div class="rating">
+          <span class="stars">★★★★★</span>
+          <span class="rating-text">5.0</span>
+        </div>
+        <div class="reviews-text">Based on 9 reviews</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== WHO IT'S FOR ========== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Who It's For</span>
+        <h2>Built for International Professionals</h2>
+        <p>Whether you're just arriving or already working in Germany, these courses are designed around your specific challenges.</p>
+      </div>
+      <div class="who-grid">
+        <div class="who-card">
+          <div class="who-card__icon">💼</div>
+          <h3>Job Seekers</h3>
+          <p>Preparing for German-speaking roles? Master interview language, cover letters, and the professional phrases that get you hired.</p>
+        </div>
+        <div class="who-card">
+          <div class="who-card__icon">🏥</div>
+          <h3>Healthcare Workers</h3>
+          <p>Nurses, doctors, and carers who need precise medical German for patient care, documentation, and hospital communication.</p>
+        </div>
+        <div class="who-card">
+          <div class="who-card__icon">⚙️</div>
+          <h3>Engineers &amp; IT</h3>
+          <p>Technical professionals who need to lead meetings, write reports, and collaborate with German-speaking colleagues and clients.</p>
+        </div>
+        <div class="who-card">
+          <div class="who-card__icon">🌍</div>
+          <h3>Expats</h3>
+          <p>Already living in Germany and struggling with workplace German? Build the confidence to fully integrate and advance your career.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== WHY IT WORKS ========== -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Why It Works</span>
+        <h2>The GermanForJobs Difference</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-bullets">
+          <div class="why-bullet">
+            <div class="why-bullet__num">1</div>
+            <div>
+              <h3>Job-Specific Vocabulary From Day One</h3>
+              <p>No textbook filler. Every lesson uses real vocabulary from your industry — medical terms, engineering jargon, HR phrases — so you can use what you learn immediately.</p>
+            </div>
+          </div>
+          <div class="why-bullet">
+            <div class="why-bullet__num">2</div>
+            <div>
+              <h3>Real Interview &amp; Workplace Simulations</h3>
+              <p>Practise actual job interview questions, workplace scenarios, and email writing in a safe space. You'll feel confident before the real situation arrives.</p>
+            </div>
+          </div>
+          <div class="why-bullet">
+            <div class="why-bullet__num">3</div>
+            <div>
+              <h3>Personalised Feedback, Not Generic Lessons</h3>
+              <p>Every student gets tailored corrections and advice based on their level, goals, and industry. No one-size-fits-all approach here.</p>
+            </div>
+          </div>
+          <div class="why-bullet">
+            <div class="why-bullet__num">4</div>
+            <div>
+              <h3>Proven Track Record Across 30+ Countries</h3>
+              <p>Students from India, Malaysia, Pakistan, Spain, Poland, Hong Kong, and beyond have landed jobs in Germany after these courses. The results speak for themselves.</p>
+            </div>
+          </div>
+        </div>
+        <div class="proof-card">
+          <div class="proof-card__quote">"</div>
+          <p>Within 3 months I went from nervous to confident in German job interviews. Levent's method is completely different — practical, direct, and focused on what German employers actually want to hear. I got the job offer.</p>
+          <div class="proof-card__author">
+            <div class="proof-card__avatar">AM</div>
+            <div>
+              <div class="proof-card__name">Ana Morales</div>
+              <div class="proof-card__role">Nurse — relocated from Spain to Germany</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== COURSES ========== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Our Courses</span>
+        <h2>Courses That Get You Hired</h2>
+        <p>Each course is built around a specific career scenario so every lesson moves you closer to your goal.</p>
+      </div>
+      <div class="courses-grid">
+        <article class="course-card">
+          <div class="course-card__top">
+            <div class="course-card__icon">🎤</div>
+            <span class="course-card__level">B1 – B2</span>
+            <h3>Job Interview Masterclass</h3>
+          </div>
+          <div class="course-card__body">
+            <p>The complete system for passing German job interviews. From "Erzählen Sie von sich" to salary negotiation — master every stage of the German hiring process.</p>
+            <ul class="course-card__features">
+              <li class="course-card__feature">Role-play real interview scenarios</li>
+              <li class="course-card__feature">German CV &amp; cover letter feedback</li>
+              <li class="course-card__feature">Salary negotiation phrases</li>
+              <li class="course-card__feature">Common German employer questions</li>
+            </ul>
+            <a href="contact.html" class="btn btn--primary form-submit">Book a Free Consultation</a>
+          </div>
+        </article>
+
+        <article class="course-card">
+          <div class="course-card__top">
+            <div class="course-card__icon">🏥</div>
+            <span class="course-card__level">A2 – B2</span>
+            <h3>German for Nurses</h3>
+          </div>
+          <div class="course-card__body">
+            <p>Purpose-built for healthcare professionals. Learn the medical German you need for patient care, ward communication, documentation, and integration into German hospital teams.</p>
+            <ul class="course-card__features">
+              <li class="course-card__feature">Patient history &amp; care conversations</li>
+              <li class="course-card__feature">Medical documentation language</li>
+              <li class="course-card__feature">Team &amp; handover communication</li>
+              <li class="course-card__feature">Recognition exam preparation support</li>
+            </ul>
+            <a href="contact.html" class="btn btn--primary form-submit">Book a Free Consultation</a>
+          </div>
+        </article>
+
+        <article class="course-card">
+          <div class="course-card__top">
+            <div class="course-card__icon">⚙️</div>
+            <span class="course-card__level">B1 – C1</span>
+            <h3>Business German for Engineers</h3>
+          </div>
+          <div class="course-card__body">
+            <p>For engineers, IT professionals, and technical specialists. Communicate confidently in meetings, write professional reports, and build relationships with German colleagues.</p>
+            <ul class="course-card__features">
+              <li class="course-card__feature">Technical vocabulary by industry</li>
+              <li class="course-card__feature">Meeting &amp; presentation language</li>
+              <li class="course-card__feature">Email &amp; report writing in German</li>
+              <li class="course-card__feature">Workplace small talk &amp; integration</li>
+            </ul>
+            <a href="contact.html" class="btn btn--primary form-submit">Book a Free Consultation</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Testimonials</span>
+        <h2>What Students Say</h2>
+        <p>Real results from real professionals who transformed their German and landed their dream jobs.</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="t-card">
+          <div class="t-card__stars">★★★★★</div>
+          <p class="t-card__text">Levent is an amazing teacher. He tailored every lesson to my nursing job goals and helped me pass my Anerkennungsprüfung. I couldn't have done it without his guidance and patience.</p>
+          <div class="t-card__author">
+            <div class="t-card__avatar">FL</div>
+            <div>
+              <div class="t-card__name">Flora</div>
+              <div class="t-card__location">🇭🇰 Hong Kong → Germany</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="t-card">
+          <div class="t-card__stars">★★★★★</div>
+          <p class="t-card__text">The interview course was exactly what I needed. We practised real questions from German employers and Levent corrected my biggest mistakes. I got the job offer after my very first interview.</p>
+          <div class="t-card__author">
+            <div class="t-card__avatar">LU</div>
+            <div>
+              <div class="t-card__name">Lucas</div>
+              <div class="t-card__location">🇧🇷 Brazil → Germany</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="t-card">
+          <div class="t-card__stars">★★★★★</div>
+          <p class="t-card__text">I was completely nervous about speaking German at work. After two months with Levent I feel like a different person. His practical approach and real-life scenarios made all the difference.</p>
+          <div class="t-card__author">
+            <div class="t-card__avatar">AM</div>
+            <div>
+              <div class="t-card__name">Ana Morales</div>
+              <div class="t-card__location">🇪🇸 Spain → Germany</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="t-card">
+          <div class="t-card__stars">★★★★★</div>
+          <p class="t-card__text">Levent understood exactly what I needed as an engineer. The technical vocabulary, meeting phrases, and email templates we practised are things I use every single day at my German company.</p>
+          <div class="t-card__author">
+            <div class="t-card__avatar">GC</div>
+            <div>
+              <div class="t-card__name">Guillermo Cruz</div>
+              <div class="t-card__location">🇲🇽 Mexico → Germany</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="t-card">
+          <div class="t-card__stars">★★★★★</div>
+          <p class="t-card__text">Very professional and results-focused. The lessons were structured, engaging, and always relevant to my IT career. I improved faster with Levent than in two years of self-study.</p>
+          <div class="t-card__author">
+            <div class="t-card__avatar">FB</div>
+            <div>
+              <div class="t-card__name">Faizhan Bhat</div>
+              <div class="t-card__location">🇮🇳 India → Germany</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="t-card">
+          <div class="t-card__stars">★★★★★</div>
+          <p class="t-card__text">I was already in Germany but struggling to move up at work because of my German. Levent helped me find my professional voice. My manager noticed the improvement within weeks.</p>
+          <div class="t-card__author">
+            <div class="t-card__avatar">KA</div>
+            <div>
+              <div class="t-card__name">Karolina</div>
+              <div class="t-card__location">🇵🇱 Poland → Germany</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="t-card">
+          <div class="t-card__stars">★★★★★</div>
+          <p class="t-card__text">The German for Nurses course was perfect for my situation. Levent explains medical vocabulary in a way that actually sticks. He also helped me prepare for my Fachsprachprüfung — and I passed!</p>
+          <div class="t-card__author">
+            <div class="t-card__avatar">IN</div>
+            <div>
+              <div class="t-card__name">Indumathy</div>
+              <div class="t-card__location">🇮🇳 India → Germany</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="t-card">
+          <div class="t-card__stars">★★★★★</div>
+          <p class="t-card__text">Outstanding tutor. I came with B1 German and left the course ready for a B2-level role. Levent's feedback is honest, clear, and always actionable. I recommend him to every professional learning German.</p>
+          <div class="t-card__author">
+            <div class="t-card__avatar">AB</div>
+            <div>
+              <div class="t-card__name">Asif Bhat</div>
+              <div class="t-card__location">🇵🇰 Pakistan → Germany</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="t-card">
+          <div class="t-card__stars">★★★★★</div>
+          <p class="t-card__text">I never thought I could have a real conversation in German at work, but Levent proved me wrong. His lessons are fun, structured, and completely focused on what matters for your career. Highly recommended!</p>
+          <div class="t-card__author">
+            <div class="t-card__avatar">BG</div>
+            <div>
+              <div class="t-card__name">Bagi</div>
+              <div class="t-card__location">🇲🇾 Malaysia → Germany</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT LEVENT ========== -->
+  <section class="section">
+    <div class="container">
+      <div class="about-inner">
+        <div class="about-visual">
+          <div class="about-photo">👨‍🏫</div>
+          <div class="about-badge">
+            <strong>500+</strong>
+            <span>Professionals Trained</span>
+          </div>
+        </div>
+        <div class="about-content">
+          <span class="section-label">About Levent</span>
+          <h2>Your German Career Coach</h2>
+          <div class="about-stats">
+            <div class="about-stat"><strong>15+</strong><span>Years experience</span></div>
+            <div class="about-stat"><strong>30+</strong><span>Countries represented</span></div>
+            <div class="about-stat"><strong>95%</strong><span>Student success rate</span></div>
+          </div>
+          <p>Hi, I'm Levent — a professional German language trainer specialising in career and business German for international professionals. I've worked with students from over 30 countries who came to Germany with big ambitions but found the language barrier was holding them back.</p>
+          <p>My approach is completely different from traditional language schools. Every lesson I teach is grounded in the real language you'll encounter in German workplaces, interviews, and professional relationships — not textbook exercises that have nothing to do with your career.</p>
+          <p>Whether you're a nurse preparing for your Fachsprachprüfung, an engineer navigating technical meetings, or a job seeker ready to ace your first German interview — I've got a system that works.</p>
+          <div style="display:flex; gap:12px; margin-top:28px; flex-wrap:wrap;">
+            <a href="about.html" class="btn btn--outline btn--lg">Learn More About Me</a>
+            <a href="contact.html" class="btn btn--primary btn--lg">Book a Consultation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="contact-inner">
+        <div class="contact-info">
+          <span class="section-label">Get In Touch</span>
+          <h2>Ready to Start Your Journey?</h2>
+          <p>Book a free 30-minute consultation and let's talk about your goals, your current level, and the best course to get you where you want to be.</p>
+          <div class="contact-detail">
+            <div class="contact-detail__icon">📱</div>
+            <div>
+              <strong>WhatsApp</strong><br>
+              <a href="https://wa.me/4916317166620?text=Hi%20Levent%2C%20I%27m%20interested%20in%20a%20free%20consultation%20for%20your%20German%20courses" style="color:var(--gray-600);">+49 163 171 66 20</a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail__icon">📧</div>
+            <div>
+              <strong>Email</strong><br>
+              <a href="mailto:info@germanforjobs.com" style="color:var(--gray-600);">info@germanforjobs.com</a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail__icon">🌍</div>
+            <div>
+              <strong>Online &amp; Worldwide</strong><br>
+              <span style="color:var(--gray-600);">All sessions via Zoom or Google Meet</span>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <form action="https://formspree.io/f/xeergddr" method="POST">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">First Name *</label>
+                <input type="text" id="fname" name="first_name" required placeholder="Your first name">
+              </div>
+              <div class="form-group">
+                <label for="lname">Last Name *</label>
+                <input type="text" id="lname" name="last_name" required placeholder="Your last name">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required placeholder="you@example.com">
+            </div>
+            <div class="form-group">
+              <label for="course">Course Interest</label>
+              <select id="course" name="course">
+                <option value="">Select a course...</option>
+                <option value="interview">Job Interview Masterclass</option>
+                <option value="nurses">German for Nurses</option>
+                <option value="engineers">Business German for Engineers</option>
+                <option value="general">General Business German</option>
+                <option value="other">Other / Not sure yet</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="level">Current German Level</label>
+              <select id="level" name="level">
+                <option value="">Select your level...</option>
+                <option value="a0">Complete beginner (A0)</option>
+                <option value="a1">A1</option>
+                <option value="a2">A2</option>
+                <option value="b1">B1</option>
+                <option value="b2">B2</option>
+                <option value="c1">C1 or above</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Tell Me About Your Goals</label>
+              <textarea id="message" name="message" placeholder="What's your situation? What do you want to achieve? Any specific challenges?"></textarea>
+            </div>
+            <input type="hidden" name="_subject" value="New consultation request – GermanForJobs">
+            <input type="hidden" name="_next" value="https://germanforjobs.com/thank-you.html">
+            <button type="submit" class="btn btn--primary form-submit">Send Message &amp; Book Consultation →</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <span class="footer__logo">German<span>ForJobs</span></span>
+          <p>Expert German language training for international professionals. Career-focused courses that help you land your dream job in Germany.</p>
+        </div>
+        <div>
+          <h4 class="footer__heading">Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="/">Home</a></li>
             <li><a href="courses.html">Courses</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="#consultation" class="nav-cta">Book Consultation</a></li>
-        </ul>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <!-- Left Side - Content -->
-        <div class="hero-content">
-            <div class="badge">
-                ✓ Trusted by 500+ professionals worldwide
-            </div>
-            
-            <h1>
-                Master Business German.<br>
-                Land Your <span class="gradient-text">Dream Job</span>
-            </h1>
-            
-            <p class="hero-description">
-                Career-focused German courses for international professionals. Real language for real workplaces — taught by an expert who knows what employers expect.
-            </p>
-            
-            <div class="hero-buttons">
-                <a href="courses.html" class="primary-btn">View All Courses</a>
-                <a href="contact.html" class="secondary-btn">Book Free Consultation</a>
-            </div>
-
-            <div class="stats-bar">
-                <div class="stat">
-                    <div class="stat-number">500+</div>
-                    <div class="stat-label">Students trained</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">95%</div>
-                    <div class="stat-label">Success rate</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">5.0</div>
-                    <div class="stat-label">Average rating</div>
-                </div>
-            </div>
+          </ul>
         </div>
-
-        <!-- Right Side - Professional Photo -->
-        <div class="hero-image">
-            <img src="levo-professional.jpg" alt="Levent Bekan - German Language Expert">
-            
-            <div class="floating-badge">
-                <div class="rating">
-                    <span class="stars">★★★★★</span>
-                    <span class="rating-text">5.0</span>
-                </div>
-                <div class="reviews-text">Based on 9 reviews</div>
-            </div>
+        <div>
+          <h4 class="footer__heading">Courses</h4>
+          <ul class="footer__links">
+            <li><a href="courses.html">Job Interview Masterclass</a></li>
+            <li><a href="courses.html">German for Nurses</a></li>
+            <li><a href="courses.html">Business German for Engineers</a></li>
+            <li><a href="contact.html">Free Consultation</a></li>
+          </ul>
         </div>
-    </section>
+        <div>
+          <h4 class="footer__heading">Contact</h4>
+          <div class="footer__contact-item">
+            <span>📱</span>
+            <a href="https://wa.me/4916317166620" style="color:inherit;">+49 163 171 66 20</a>
+          </div>
+          <div class="footer__contact-item">
+            <span>📧</span>
+            <a href="mailto:info@germanforjobs.com" style="color:inherit;">info@germanforjobs.com</a>
+          </div>
+          <div class="footer__contact-item">
+            <span>🌍</span>
+            <span>Online – Worldwide</span>
+          </div>
+          <div style="margin-top:20px;">
+            <a href="contact.html" class="btn btn--primary btn--sm">Book Free Consultation</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 GermanForJobs. All rights reserved.</p>
+        <p>
+          <a href="#">Privacy Policy</a> &middot;
+          <a href="#">Terms of Service</a>
+        </p>
+      </div>
+    </div>
+  </footer>
 
-    <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/4916317166620" class="whatsapp-float" target="_blank">
-        💬
-    </a>
+  <!-- ========== WHATSAPP FLOAT ========== -->
+  <a class="wa-float"
+     href="https://wa.me/4916317166620?text=Hi%20Levent%2C%20I%27m%20interested%20in%20a%20free%20consultation%20for%20your%20German%20courses"
+     target="_blank"
+     rel="noopener noreferrer">
+    <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <script>
+    // Mobile nav toggle
+    const toggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      toggle.classList.toggle('open');
+    });
+  </script>
 </body>
 </html>

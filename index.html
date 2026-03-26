@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -207,14 +206,15 @@
       margin-bottom: 2rem;
       width: fit-content;
     }
-.hero h1 {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 4rem;
-  font-weight: 700;
-  line-height: 1.1;
-  margin-bottom: 1.5rem;
-  color: white;
-}
+    .hero h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 4rem;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      color: white;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
     .gradient-text {
       background: linear-gradient(135deg, var(--gold) 0%, #fbbf24 100%);
       -webkit-background-clip: text;
@@ -223,9 +223,10 @@
     .hero-description {
       font-size: 1.25rem;
       line-height: 1.8;
-      color: #cbd5e1;
+      color: #ffffff;
       margin-bottom: 3rem;
       max-width: 90%;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.2);
     }
     .hero-buttons { display: flex; gap: 1rem; margin-bottom: 4rem; }
     .secondary-btn {
@@ -261,7 +262,7 @@
     }
     .stat-label {
       font-size: 0.95rem;
-      color: #94a3b8;
+      color: #ffffff;
     }
     .hero-image {
       position: relative;
@@ -717,7 +718,7 @@
 <body>
 
   <!-- ========== NAVIGATION ========== -->
-  <nav class="nav">
+  <nav class="nav" aria-label="Main navigation">
     <div class="nav__inner">
       <a href="/" class="nav__logo">German<span>ForJobs</span></a>
       <div class="nav__links" id="nav-links">
@@ -727,11 +728,14 @@
         <a href="contact.html" class="nav__link">Contact</a>
         <a href="contact.html" class="btn btn--primary btn--sm">Book Consultation</a>
       </div>
-      <button class="nav__toggle" id="nav-toggle">
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <main>
 
   <!-- ========== MODERN HERO ========== -->
   <section class="hero">
@@ -774,7 +778,7 @@
       <img src="levo-professional.jpg" alt="Levent Bekan - German Language Expert">
       <div class="floating-badge">
         <div class="rating">
-          <span class="stars">★★★★★</span>
+          <span class="stars" aria-label="5 stars">★★★★★</span>
           <span class="rating-text">5.0</span>
         </div>
         <div class="reviews-text">Based on 9 reviews</div>
@@ -791,26 +795,26 @@
         <p>Whether you're just arriving or already working in Germany, these courses are designed around your specific challenges.</p>
       </div>
       <div class="who-grid">
-        <div class="who-card">
-          <div class="who-card__icon">💼</div>
+        <article class="who-card">
+          <div class="who-card__icon" aria-hidden="true">💼</div>
           <h3>Job Seekers</h3>
           <p>Preparing for German-speaking roles? Master interview language, cover letters, and the professional phrases that get you hired.</p>
-        </div>
-        <div class="who-card">
-          <div class="who-card__icon">🏥</div>
+        </article>
+        <article class="who-card">
+          <div class="who-card__icon" aria-hidden="true">🏥</div>
           <h3>Healthcare Workers</h3>
           <p>Nurses, doctors, and carers who need precise medical German for patient care, documentation, and hospital communication.</p>
-        </div>
-        <div class="who-card">
-          <div class="who-card__icon">⚙️</div>
+        </article>
+        <article class="who-card">
+          <div class="who-card__icon" aria-hidden="true">⚙️</div>
           <h3>Engineers &amp; IT</h3>
           <p>Technical professionals who need to lead meetings, write reports, and collaborate with German-speaking colleagues and clients.</p>
-        </div>
-        <div class="who-card">
-          <div class="who-card__icon">🌍</div>
+        </article>
+        <article class="who-card">
+          <div class="who-card__icon" aria-hidden="true">🌍</div>
           <h3>Expats</h3>
           <p>Already living in Germany and struggling with workplace German? Build the confidence to fully integrate and advance your career.</p>
-        </div>
+        </article>
       </div>
     </div>
   </section>
@@ -825,45 +829,45 @@
       <div class="why-grid">
         <div class="why-bullets">
           <div class="why-bullet">
-            <div class="why-bullet__num">1</div>
+            <div class="why-bullet__num" aria-hidden="true">1</div>
             <div>
               <h3>Job-Specific Vocabulary From Day One</h3>
               <p>No textbook filler. Every lesson uses real vocabulary from your industry — medical terms, engineering jargon, HR phrases — so you can use what you learn immediately.</p>
             </div>
           </div>
           <div class="why-bullet">
-            <div class="why-bullet__num">2</div>
+            <div class="why-bullet__num" aria-hidden="true">2</div>
             <div>
               <h3>Real Interview &amp; Workplace Simulations</h3>
               <p>Practise actual job interview questions, workplace scenarios, and email writing in a safe space. You'll feel confident before the real situation arrives.</p>
             </div>
           </div>
           <div class="why-bullet">
-            <div class="why-bullet__num">3</div>
+            <div class="why-bullet__num" aria-hidden="true">3</div>
             <div>
               <h3>Personalised Feedback, Not Generic Lessons</h3>
               <p>Every student gets tailored corrections and advice based on their level, goals, and industry. No one-size-fits-all approach here.</p>
             </div>
           </div>
           <div class="why-bullet">
-            <div class="why-bullet__num">4</div>
+            <div class="why-bullet__num" aria-hidden="true">4</div>
             <div>
               <h3>Proven Track Record Across 30+ Countries</h3>
               <p>Students from India, Malaysia, Pakistan, Spain, Poland, Hong Kong, and beyond have landed jobs in Germany after these courses. The results speak for themselves.</p>
             </div>
           </div>
         </div>
-        <div class="proof-card">
-          <div class="proof-card__quote">"</div>
+        <aside class="proof-card">
+          <div class="proof-card__quote" aria-hidden="true">"</div>
           <p>Within 3 months I went from nervous to confident in German job interviews. Levent's method is completely different — practical, direct, and focused on what German employers actually want to hear. I got the job offer.</p>
           <div class="proof-card__author">
-            <div class="proof-card__avatar">AM</div>
+            <div class="proof-card__avatar" aria-hidden="true">AM</div>
             <div>
               <div class="proof-card__name">Ana Morales</div>
               <div class="proof-card__role">Nurse — relocated from Spain to Germany</div>
             </div>
           </div>
-        </div>
+        </aside>
       </div>
     </div>
   </section>
@@ -879,7 +883,7 @@
       <div class="courses-grid">
         <article class="course-card">
           <div class="course-card__top">
-            <div class="course-card__icon">🎤</div>
+            <div class="course-card__icon" aria-hidden="true">🎤</div>
             <span class="course-card__level">B1 – B2</span>
             <h3>Job Interview Masterclass</h3>
           </div>
@@ -897,7 +901,7 @@
 
         <article class="course-card">
           <div class="course-card__top">
-            <div class="course-card__icon">🏥</div>
+            <div class="course-card__icon" aria-hidden="true">🏥</div>
             <span class="course-card__level">A2 – B2</span>
             <h3>German for Nurses</h3>
           </div>
@@ -915,7 +919,7 @@
 
         <article class="course-card">
           <div class="course-card__top">
-            <div class="course-card__icon">⚙️</div>
+            <div class="course-card__icon" aria-hidden="true">⚙️</div>
             <span class="course-card__level">B1 – C1</span>
             <h3>Business German for Engineers</h3>
           </div>
@@ -943,113 +947,113 @@
         <p>Real results from real professionals who transformed their German and landed their dream jobs.</p>
       </div>
       <div class="testimonials-grid">
-        <div class="t-card">
-          <div class="t-card__stars">★★★★★</div>
+        <article class="t-card">
+          <div class="t-card__stars" aria-label="5 stars">★★★★★</div>
           <p class="t-card__text">Levent is an amazing teacher. He tailored every lesson to my nursing job goals and helped me pass my Anerkennungsprüfung. I couldn't have done it without his guidance and patience.</p>
           <div class="t-card__author">
-            <div class="t-card__avatar">FL</div>
+            <div class="t-card__avatar" aria-hidden="true">FL</div>
             <div>
               <div class="t-card__name">Flora</div>
               <div class="t-card__location">🇭🇰 Hong Kong → Germany</div>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div class="t-card">
-          <div class="t-card__stars">★★★★★</div>
+        <article class="t-card">
+          <div class="t-card__stars" aria-label="5 stars">★★★★★</div>
           <p class="t-card__text">The interview course was exactly what I needed. We practised real questions from German employers and Levent corrected my biggest mistakes. I got the job offer after my very first interview.</p>
           <div class="t-card__author">
-            <div class="t-card__avatar">LU</div>
+            <div class="t-card__avatar" aria-hidden="true">LU</div>
             <div>
               <div class="t-card__name">Lucas</div>
               <div class="t-card__location">🇧🇷 Brazil → Germany</div>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div class="t-card">
-          <div class="t-card__stars">★★★★★</div>
+        <article class="t-card">
+          <div class="t-card__stars" aria-label="5 stars">★★★★★</div>
           <p class="t-card__text">I was completely nervous about speaking German at work. After two months with Levent I feel like a different person. His practical approach and real-life scenarios made all the difference.</p>
           <div class="t-card__author">
-            <div class="t-card__avatar">AM</div>
+            <div class="t-card__avatar" aria-hidden="true">AM</div>
             <div>
               <div class="t-card__name">Ana Morales</div>
               <div class="t-card__location">🇪🇸 Spain → Germany</div>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div class="t-card">
-          <div class="t-card__stars">★★★★★</div>
+        <article class="t-card">
+          <div class="t-card__stars" aria-label="5 stars">★★★★★</div>
           <p class="t-card__text">Levent understood exactly what I needed as an engineer. The technical vocabulary, meeting phrases, and email templates we practised are things I use every single day at my German company.</p>
           <div class="t-card__author">
-            <div class="t-card__avatar">GC</div>
+            <div class="t-card__avatar" aria-hidden="true">GC</div>
             <div>
               <div class="t-card__name">Guillermo Cruz</div>
               <div class="t-card__location">🇲🇽 Mexico → Germany</div>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div class="t-card">
-          <div class="t-card__stars">★★★★★</div>
+        <article class="t-card">
+          <div class="t-card__stars" aria-label="5 stars">★★★★★</div>
           <p class="t-card__text">Very professional and results-focused. The lessons were structured, engaging, and always relevant to my IT career. I improved faster with Levent than in two years of self-study.</p>
           <div class="t-card__author">
-            <div class="t-card__avatar">FB</div>
+            <div class="t-card__avatar" aria-hidden="true">FB</div>
             <div>
               <div class="t-card__name">Faizhan Bhat</div>
               <div class="t-card__location">🇮🇳 India → Germany</div>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div class="t-card">
-          <div class="t-card__stars">★★★★★</div>
+        <article class="t-card">
+          <div class="t-card__stars" aria-label="5 stars">★★★★★</div>
           <p class="t-card__text">I was already in Germany but struggling to move up at work because of my German. Levent helped me find my professional voice. My manager noticed the improvement within weeks.</p>
           <div class="t-card__author">
-            <div class="t-card__avatar">KA</div>
+            <div class="t-card__avatar" aria-hidden="true">KA</div>
             <div>
               <div class="t-card__name">Karolina</div>
               <div class="t-card__location">🇵🇱 Poland → Germany</div>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div class="t-card">
-          <div class="t-card__stars">★★★★★</div>
+        <article class="t-card">
+          <div class="t-card__stars" aria-label="5 stars">★★★★★</div>
           <p class="t-card__text">The German for Nurses course was perfect for my situation. Levent explains medical vocabulary in a way that actually sticks. He also helped me prepare for my Fachsprachprüfung — and I passed!</p>
           <div class="t-card__author">
-            <div class="t-card__avatar">IN</div>
+            <div class="t-card__avatar" aria-hidden="true">IN</div>
             <div>
               <div class="t-card__name">Indumathy</div>
               <div class="t-card__location">🇮🇳 India → Germany</div>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div class="t-card">
-          <div class="t-card__stars">★★★★★</div>
+        <article class="t-card">
+          <div class="t-card__stars" aria-label="5 stars">★★★★★</div>
           <p class="t-card__text">Outstanding tutor. I came with B1 German and left the course ready for a B2-level role. Levent's feedback is honest, clear, and always actionable. I recommend him to every professional learning German.</p>
           <div class="t-card__author">
-            <div class="t-card__avatar">AB</div>
+            <div class="t-card__avatar" aria-hidden="true">AB</div>
             <div>
               <div class="t-card__name">Asif Bhat</div>
               <div class="t-card__location">🇵🇰 Pakistan → Germany</div>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div class="t-card">
-          <div class="t-card__stars">★★★★★</div>
+        <article class="t-card">
+          <div class="t-card__stars" aria-label="5 stars">★★★★★</div>
           <p class="t-card__text">I never thought I could have a real conversation in German at work, but Levent proved me wrong. His lessons are fun, structured, and completely focused on what matters for your career. Highly recommended!</p>
           <div class="t-card__author">
-            <div class="t-card__avatar">BG</div>
+            <div class="t-card__avatar" aria-hidden="true">BG</div>
             <div>
               <div class="t-card__name">Bagi</div>
               <div class="t-card__location">🇲🇾 Malaysia → Germany</div>
             </div>
           </div>
-        </div>
+        </article>
       </div>
     </div>
   </section>
@@ -1096,21 +1100,21 @@
           <h2>Ready to Start Your Journey?</h2>
           <p>Book a free 30-minute consultation and let's talk about your goals, your current level, and the best course to get you where you want to be.</p>
           <div class="contact-detail">
-            <div class="contact-detail__icon">📱</div>
+            <div class="contact-detail__icon" aria-hidden="true">📱</div>
             <div>
               <strong>WhatsApp</strong><br>
               <a href="https://wa.me/4916317166620?text=Hi%20Levent%2C%20I%27m%20interested%20in%20a%20free%20consultation%20for%20your%20German%20courses" style="color:var(--gray-600);">+49 163 171 66 20</a>
             </div>
           </div>
           <div class="contact-detail">
-            <div class="contact-detail__icon">📧</div>
+            <div class="contact-detail__icon" aria-hidden="true">📧</div>
             <div>
               <strong>Email</strong><br>
               <a href="mailto:info@germanforjobs.com" style="color:var(--gray-600);">info@germanforjobs.com</a>
             </div>
           </div>
           <div class="contact-detail">
-            <div class="contact-detail__icon">🌍</div>
+            <div class="contact-detail__icon" aria-hidden="true">🌍</div>
             <div>
               <strong>Online &amp; Worldwide</strong><br>
               <span style="color:var(--gray-600);">All sessions via Zoom or Google Meet</span>
@@ -1151,7 +1155,7 @@
                 <option value="a0">Complete beginner (A0)</option>
                 <option value="a1">A1</option>
                 <option value="a2">A2</option>
-                <option value="b1">B1</option>
+                <option value="a1">B1</option>
                 <option value="b2">B2</option>
                 <option value="c1">C1 or above</option>
               </select>
@@ -1169,6 +1173,9 @@
     </div>
   </section>
 
+  </main>
+  <!-- ========== END MAIN CONTENT ========== -->
+
   <!-- ========== FOOTER ========== -->
   <footer class="footer">
     <div class="container">
@@ -1178,7 +1185,7 @@
           <p>Expert German language training for international professionals. Career-focused courses that help you land your dream job in Germany.</p>
         </div>
         <div>
-          <h4 class="footer__heading">Quick Links</h4>
+          <h2 class="footer__heading">Quick Links</h2>
           <ul class="footer__links">
             <li><a href="/">Home</a></li>
             <li><a href="courses.html">Courses</a></li>
@@ -1187,7 +1194,7 @@
           </ul>
         </div>
         <div>
-          <h4 class="footer__heading">Courses</h4>
+          <h2 class="footer__heading">Courses</h2>
           <ul class="footer__links">
             <li><a href="courses.html">Job Interview Masterclass</a></li>
             <li><a href="courses.html">German for Nurses</a></li>
@@ -1196,17 +1203,17 @@
           </ul>
         </div>
         <div>
-          <h4 class="footer__heading">Contact</h4>
+          <h2 class="footer__heading">Contact</h2>
           <div class="footer__contact-item">
-            <span>📱</span>
+            <span aria-hidden="true">📱</span>
             <a href="https://wa.me/4916317166620" style="color:inherit;">+49 163 171 66 20</a>
           </div>
           <div class="footer__contact-item">
-            <span>📧</span>
+            <span aria-hidden="true">📧</span>
             <a href="mailto:info@germanforjobs.com" style="color:inherit;">info@germanforjobs.com</a>
           </div>
           <div class="footer__contact-item">
-            <span>🌍</span>
+            <span aria-hidden="true">🌍</span>
             <span>Online – Worldwide</span>
           </div>
           <div style="margin-top:20px;">
@@ -1228,8 +1235,9 @@
   <a class="wa-float"
      href="https://wa.me/4916317166620?text=Hi%20Levent%2C%20I%27m%20interested%20in%20a%20free%20consultation%20for%20your%20German%20courses"
      target="_blank"
-     rel="noopener noreferrer">
-    <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+     rel="noopener noreferrer"
+     aria-label="Contact us on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
     </svg>
   </a>
@@ -1239,8 +1247,9 @@
     const toggle = document.getElementById('nav-toggle');
     const navLinks = document.getElementById('nav-links');
     toggle.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
+      const isOpen = navLinks.classList.toggle('open');
       toggle.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen);
     });
   </script>
 </body>

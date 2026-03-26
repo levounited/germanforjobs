@@ -682,14 +682,14 @@
   <nav class="nav">
     <div class="nav__inner">
       <a href="/" class="nav__logo">German<span>ForJobs</span></a>
-      <div class="nav__links" id="nav-links">
+      <div class="nav__links" id="nav-links" role="menubar">
         <a href="/" class="nav__link">Home</a>
         <a href="courses.html" class="nav__link">Courses</a>
         <a href="about.html" class="nav__link">About</a>
         <a href="contact.html" class="nav__link">Contact</a>
         <a href="contact.html" class="btn btn--primary btn--sm">Book Consultation</a>
       </div>
-      <button class="nav__toggle" id="nav-toggle">
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -1196,14 +1196,6 @@
     </svg>
   </a>
 
-  <script>
-    // Mobile nav toggle
-    const toggle = document.getElementById('nav-toggle');
-    const navLinks = document.getElementById('nav-links');
-    toggle.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
-      toggle.classList.toggle('active');
-    });
-  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>

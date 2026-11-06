@@ -76,11 +76,10 @@ document.querySelectorAll('[data-shop]').forEach(b=>b.addEventListener('click',(
 </script><button id="reopen-welcome" type="button" aria-label="Open free German level test" style="position:fixed;right:16px;bottom:18px;z-index:25;background:#ffba00;color:#111;border:2px solid #151515;border-radius:30px;padding:11px 17px;font-weight:800;box-shadow:0 4px 18px #0003">Free Level Quiz</button><script id="welcome-popup-script">(function(){
 const overlay=document.getElementById('welcome-overlay');const close=document.getElementById('welcome-close');const key='gfj-welcome-seen-v2';let previousFocus=null;
 function hide(){overlay.classList.remove('is-visible');overlay.setAttribute('aria-hidden','true');document.body.style.overflow='';if(previousFocus&&document.contains(previousFocus))previousFocus.focus()}
-function show(){if(overlay.classList.contains('is-visible'))return;previousFocus=document.activeElement;overlay.classList.add('is-visible');overlay.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';close.focus();try{sessionStorage.setItem(key,'1')}catch(e){}}
+function show(){if(overlay.classList.contains('is-visible'))return;previousFocus=document.activeElement;overlay.classList.add('is-visible');overlay.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';close.focus();}
 close.addEventListener('click',hide);overlay.addEventListener('click',e=>{if(e.target===overlay)hide()});document.addEventListener('keydown',e=>{if(!overlay.classList.contains('is-visible'))return;if(e.key==='Escape'){e.stopPropagation();hide()}if(e.key==='Tab'){const buttons=Array.from(overlay.querySelectorAll('button'));const first=buttons[0],last=buttons[buttons.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}});
 overlay.querySelectorAll('[data-welcome-level]').forEach(button=>button.addEventListener('click',()=>{const level=button.dataset.welcomeLevel;hide();const existing=document.querySelector('[data-practice-level="'+level+'"]');if(existing)existing.click();document.getElementById('free-practice')?.scrollIntoView({behavior:'smooth',block:'start'});setTimeout(()=>{document.getElementById('practice-question')?.setAttribute('tabindex','-1');document.getElementById('practice-question')?.focus({preventScroll:true})},450)}));
-let seen=false;try{seen=sessionStorage.getItem(key)==='1'}catch(e){}
-const forcePreview=new URLSearchParams(window.location.search).has('showWelcome');
-if(forcePreview){window.setTimeout(show,500)}else if(!seen){window.setTimeout(show,5000)}
+// Always display after five seconds, including on refresh, until testing is confirmed.
+window.setTimeout(show,5000);
 const reopen=document.getElementById('reopen-welcome');if(reopen)reopen.addEventListener('click',show);
 })();</script></body></html>

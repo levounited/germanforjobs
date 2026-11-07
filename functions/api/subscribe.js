@@ -49,7 +49,8 @@ export async function onRequestPost({ request, env }) {
       },
       body: JSON.stringify({
         email,
-        groups: [env.MAILERLITE_GROUP_ID]
+        groups: [env.MAILERLITE_GROUP_ID],
+        status: "unconfirmed"
       })
     });
 
